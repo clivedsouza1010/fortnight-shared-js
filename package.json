@@ -1,0 +1,21 @@
+{
+  "name": "fortnight-shared-js",
+  "version": "0.0.0",
+  "description": "Shared utility library",
+  "main": "index.js",
+  "repository": "https://github.com/clivedsouza1010/fortnight-shared-js",
+  "author": "clive <clive.dsouza1010@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.13",
+    "@types/ua-parser-js": "^0.7.33",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0",
+    "ua-parser-js": "^0.7.21"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p .",
+    "test": "jest --config ./jest.config.js"
+  }
+}
