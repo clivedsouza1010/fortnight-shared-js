@@ -36,6 +36,7 @@ export function getName(): string {
   return navigator.userAgent;
 }
 
+/* istanbul ignore next */
 export function getOperatingSystem(): string {
   const parser: UAParser = new UAParser(getName());
   return parser.getOS().name;
@@ -44,7 +45,7 @@ export function getOperatingSystem(): string {
 export function getPreferredLanguage(): string {
   let preferredLanguage;
   const languages: readonly string[] = navigator.languages;
-  if (languages.length > 0) {
+  if (languages && languages.length > 0) {
     preferredLanguage = languages[0];
   } else {
     preferredLanguage = navigator.language;
